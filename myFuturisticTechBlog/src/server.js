@@ -28,9 +28,9 @@ async function connectToDatabase() {
 connectToDatabase();
 
 // Define routes
-app.use('/api/users', require('./routes/userRoutes'));
-app.use('/api/posts', require('./routes/postRoutes'));
-app.use('/api/comments', require('./routes/commentRoutes'));
+app.use('/api/users', require('./controllers/userController'));
+app.use('/api/posts', require('./controllers/postController'));
+app.use('/api/comments', require('./controllers/commentController'));
 // Add other routes as needed
 
 // Error handling middleware
