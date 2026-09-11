@@ -1,7 +1,19 @@
 # VALE LAB — AGENTS.md
 
+## Read order / authority
+Before substantive work, read these files in order:
+1. `docs/VALE_SOURCE_OF_TRUTH.md` — current product/research-system intent. This wins when older design docs conflict.
+2. `docs/BUILD_DISCIPLINE.md` — scope freeze, builder mode, and human-spotter rules.
+3. `docs/METHOD_REGISTRY.md` — provenance and adoption status of external methods.
+4. `docs/RESEARCH_METHOD.md`, `docs/SOURCE_AND_CITATION_POLICY.md`, `docs/HYPOTHESIS_WORKBENCH.md`, and `docs/ROBOT_SCIENTIST_RULES.md` as relevant to the task.
+5. The active GitHub issue / acceptance criteria.
+
+Do not silently reconcile conflicts. Follow the higher-authority document and flag a genuine contradiction.
+
 ## Mission
 Build Vale Publishing / Vale Lab as a small AI-assisted R&D and publishing system. The public site should turn real research, public technical work, experiments, and project progress into clear, high-quality writing and useful prototypes.
+
+Vale is a human-augmentation system. It should make established scientific and analytic methods easier for ordinary humans to use without pretending to replace domain experts. Prefer adapting well-supported methods from competent researchers, laboratories, standards bodies, engineering organizations, and analytic institutions over inventing methodology from scratch. Credit original people and institutions prominently when their work materially shapes Vale.
 
 The long-term vision is a reusable multimedia production system that can eventually generate coherent books, series, art, games, video, and other interactive entertainment from structured creative inputs. Do not attempt to build that whole system here. This repository is the public research and publishing layer that feeds and documents those projects.
 
@@ -26,6 +38,7 @@ Avoid research theater. Prefer work that changes what we build or understand.
 - When evidence is genuinely mixed, say so.
 - Separate what a paper demonstrated from what a product announcement claims.
 - Avoid hype language unless quoting or analyzing hype.
+- Give visible credit to researchers, labs, institutions, datasets, maintainers, and method originators whose work materially enables the article or experiment.
 
 ## Investigative method
 For each research topic:
@@ -66,7 +79,7 @@ Preferred article structure:
 - Competing interpretation / strongest objection
 - What could change the conclusion
 - What Vale Lab can test or build next
-- Sources
+- Sources / credits
 
 ## Project departments
 Use these as flexible research lanes, not bureaucracy:
