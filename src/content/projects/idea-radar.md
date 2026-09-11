@@ -13,4 +13,3 @@ tags: ["next", "project material"]
 ## Project summary
 
 Idea Radar will prioritize technical substance, relevance, reuse potential, license, and security caveats over hype or popularity. The crawler is explicitly out of scope for this publication POC.
-

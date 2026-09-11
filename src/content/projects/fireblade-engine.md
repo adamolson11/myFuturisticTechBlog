@@ -20,4 +20,3 @@ Fireblade is Vale's current build priority. Its exit condition is a complete rea
 - Asset catalog and reference locking
 - Sequence manifests and panel-level revisions
 - Visual QA and batch generation/review workflows
-

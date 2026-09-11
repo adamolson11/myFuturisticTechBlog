@@ -13,4 +13,3 @@ tags: ["later", "project material"]
 ## Project summary
 
 This project is intentionally behind the current Fireblade and Research Desk milestones. Its potential inputs include research methods, source validation, prototype evaluation, and written case studies.
-

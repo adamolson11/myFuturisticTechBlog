@@ -13,4 +13,3 @@ tags: ["next", "project material"]
 ## Project summary
 
 The Research Desk is the editorial system behind this site. Its proof of concept is a transparent research packet and a draft article that can be audited and revised before publication.
-

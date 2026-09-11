@@ -12,4 +12,3 @@ const entries = await getCollection('projects');
   <p class="lede">Each project is framed as a reusable system, not a one-off. Status reflects the current planning material.</p>
   <div class="grid">{entries.map((entry) => <PublicationCard entry={entry} href={`/projects/${entry.id}`} />)}</div>
 </BaseLayout>
-

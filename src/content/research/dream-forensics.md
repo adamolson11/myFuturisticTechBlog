@@ -29,4 +29,3 @@ Plausible generated imagery is not evidence of faithful measurement. Any future 
 ## Next experiment
 
 Start with a research packet that separates demonstrated mental-imagery decoding results from speculative narrative implications. No human-subject data collection is proposed here.
-

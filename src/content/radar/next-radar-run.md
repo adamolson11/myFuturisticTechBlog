@@ -13,4 +13,3 @@ tags: ["placeholder", "project material"]
 ## Placeholder
 
 Future runs will add up to three reviewed candidates here after research packets establish source provenance, practical relevance, license notes, and security caveats.
-

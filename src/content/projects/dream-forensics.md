@@ -13,4 +13,3 @@ tags: ["later", "project material", "fiction development"]
 ## Project summary
 
 This exploratory concept asks how to present uncertainty when generative systems complete weak or partial neural signals. It is not a claim about current dream-recording technology.
-

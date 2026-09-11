@@ -12,4 +12,3 @@ const entries = (await getCollection('research')).sort((a, b) => b.data.date.val
   <p class="lede">Each entry states its status, maturity, confidence, and relationship to Vale projects. Seed entries are project material, not externally researched articles.</p>
   <div class="grid">{entries.map((entry) => <PublicationCard entry={entry} href={`/research/${entry.id}`} />)}</div>
 </BaseLayout>
-

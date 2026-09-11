@@ -13,4 +13,3 @@ tags: ["later", "project material"]
 ## Project summary
 
 This project should not begin until Fireblade produces a finished book. It may later test whether structured creative inputs can support an illustrated story, script/audio layer, and simple interactive experience.
-

@@ -29,4 +29,3 @@ The workflow is a concept until it produces a complete readable volume and a new
 ## Next experiment
 
 Create one complete sequence using structured canon, visual references, an asset catalog, and a revision log; record where continuity or review fails.
-

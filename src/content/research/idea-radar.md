@@ -29,4 +29,3 @@ No crawler or ranking system is implemented in this publication proof of concept
 ## Next experiment
 
 Manually prepare three research packets using the documented template and evaluate whether each packet changes a Vale reading, testing, or build decision.
-
