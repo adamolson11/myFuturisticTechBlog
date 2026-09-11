@@ -4,11 +4,12 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import PublicationCard from '../../components/PublicationCard.astro';
 
 const entries = (await getCollection('research')).sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+const base = import.meta.env.BASE_URL;
 ---
 
 <BaseLayout title="Research" description="Vale Lab investigations, notes, and exploratory project material.">
   <p class="eyebrow">Research index</p>
   <h1>Investigations</h1>
   <p class="lede">Each entry states its status, maturity, confidence, and relationship to Vale projects. Seed entries are project material, not externally researched articles.</p>
-  <div class="grid">{entries.map((entry) => <PublicationCard entry={entry} href={`/research/${entry.id}`} />)}</div>
+  <div class="grid">{entries.map((entry) => <PublicationCard entry={entry} href={`${base}/research/${entry.id}`} />)}</div>
 </BaseLayout>

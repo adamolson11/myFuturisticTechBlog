@@ -49,7 +49,15 @@ npm install
 npm run dev
 ```
 
-Run `npm run check` for Astro and TypeScript checks, then `npm run build` to create the deployable site in `dist/`. Any static host can deploy that directory.
+Run `npm run check` for Astro and TypeScript checks, then `npm run build` to create the deployable site in `dist/`.
+
+## GitHub Pages
+
+The included GitHub Actions workflow deploys the site to:
+<https://adamolson11.github.io/myFuturisticTechBlog/>
+
+Before its first deployment, the repository owner must make one setting change: open
+**Settings → Pages → Build and deployment → Source** and select **GitHub Actions**.
 
 ## Adding publication content
 
