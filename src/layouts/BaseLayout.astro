@@ -1,0 +1,63 @@
+---
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description = 'Vale Lab is Vale Publishing’s public research notebook.' } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <title>{title} | Vale Lab</title>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="wordmark" href="/">VALE <span>LAB</span></a>
+      <nav aria-label="Main navigation">
+        <a href="/research">Research</a>
+        <a href="/projects">Projects</a>
+        <a href="/method">Method</a>
+      </nav>
+    </header>
+    <main><slot /></main>
+    <footer>
+      <p>Vale Publishing / Vale Lab — a human-reviewed research and project journal.</p>
+    </footer>
+  </body>
+</html>
+
+<style is:global>
+  :root { color: #201f1b; background: #f4f0e8; font-family: Georgia, "Times New Roman", serif; }
+  * { box-sizing: border-box; }
+  body { margin: 0; line-height: 1.6; }
+  a { color: inherit; text-underline-offset: .2em; }
+  a:hover { color: #91452d; }
+  .site-header, main, footer { max-width: 72rem; margin: auto; padding-left: 1.25rem; padding-right: 1.25rem; }
+  .site-header { border-bottom: 1px solid #b8b0a2; display: flex; justify-content: space-between; align-items: center; padding-top: 1.2rem; padding-bottom: 1.2rem; }
+  .wordmark { font-family: Arial, sans-serif; font-size: 1.1rem; font-weight: 800; letter-spacing: .14em; text-decoration: none; }
+  .wordmark span { color: #91452d; }
+  nav { display: flex; gap: 1rem; font-family: Arial, sans-serif; font-size: .9rem; }
+  main { min-height: calc(100vh - 10rem); padding-top: 2.5rem; padding-bottom: 4rem; }
+  footer { border-top: 1px solid #b8b0a2; color: #615d54; font-size: .85rem; padding-top: 1.25rem; padding-bottom: 1.25rem; }
+  h1, h2, h3 { font-family: Arial, sans-serif; line-height: 1.1; }
+  h1 { font-size: clamp(2.5rem, 8vw, 5.6rem); letter-spacing: -.06em; margin: 0; }
+  h2 { font-size: clamp(1.5rem, 4vw, 2.3rem); margin-top: 3rem; }
+  .eyebrow, .meta { color: #91452d; font-family: Arial, sans-serif; font-size: .78rem; font-weight: bold; letter-spacing: .08em; text-transform: uppercase; }
+  .lede { font-size: clamp(1.15rem, 2vw, 1.45rem); max-width: 44rem; }
+  .grid { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); }
+  .card { background: #fffdf8; border: 1px solid #b8b0a2; padding: 1.25rem; }
+  .card h3 { margin: .35rem 0; font-size: 1.25rem; }
+  .card p { margin-bottom: 0; }
+  .tags { display: flex; flex-wrap: wrap; gap: .45rem; list-style: none; padding: 0; }
+  .tags li { border: 1px solid #b8b0a2; font: .7rem Arial, sans-serif; letter-spacing: .05em; padding: .2rem .4rem; text-transform: uppercase; }
+  article { max-width: 46rem; }
+  article h1 { font-size: clamp(2.4rem, 7vw, 4.5rem); }
+  article table { border-collapse: collapse; display: block; overflow-x: auto; width: 100%; }
+  article th, article td { border: 1px solid #b8b0a2; padding: .5rem; text-align: left; }
+  @media (max-width: 34rem) { .site-header { align-items: flex-start; flex-direction: column; gap: 1rem; } }
+</style>
