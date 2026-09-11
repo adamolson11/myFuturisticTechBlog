@@ -39,3 +39,25 @@ Every serious article should make it possible for a skeptical reader to answer:
 The larger Vale Publishing concept is a high-quality multimedia generation system: a family could eventually build an internally coherent library of personalized books, series, art, games, video, and interactive worlds from structured creative inputs and reusable assets.
 
 That future is intentionally out of scope for this proof of concept. We are building the pieces one useful system at a time.
+
+## Local development
+
+This static Astro site requires Node.js 22 or later.
+
+```sh
+npm install
+npm run dev
+```
+
+Run `npm run check` for Astro and TypeScript checks, then `npm run build` to create the deployable site in `dist/`. Any static host can deploy that directory.
+
+## Adding publication content
+
+Content is Markdown with validated front matter in `src/content/`. Add a file to the appropriate folder:
+
+- `research/` for notes, investigations, and articles;
+- `projects/` for Vale project summaries;
+- `radar/` for human-reviewed Idea Radar entries;
+- `proposals/` for untested proposals.
+
+Research entries need the fields in `docs/ARTICLE_TEMPLATE.md`: title, date, department, status, maturity score, confidence, summary, related projects, and tags. Create a research packet from `docs/DAILY_RESEARCH_PACKET.md` before drafting substantive external claims. Long-form publication remains human-approved.

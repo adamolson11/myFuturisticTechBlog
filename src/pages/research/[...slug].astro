@@ -1,0 +1,22 @@
+---
+import { getCollection, render } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+export async function getStaticPaths() {
+  return (await getCollection('research')).map((entry) => ({ params: { slug: entry.id }, props: { entry } }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+---
+
+<BaseLayout title={entry.data.title} description={entry.data.summary}>
+  <article>
+    <p class="eyebrow">{entry.data.department} · {entry.data.status} · maturity {entry.data.maturity_score}/6 · {entry.data.confidence} confidence</p>
+    <h1>{entry.data.title}</h1>
+    <p class="lede">{entry.data.summary}</p>
+    <p class="meta">Related projects: {entry.data.related_projects.join(', ')}</p>
+    <Content />
+  </article>
+</BaseLayout>
+

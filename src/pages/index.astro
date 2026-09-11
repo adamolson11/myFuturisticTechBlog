@@ -1,0 +1,32 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PublicationCard from '../components/PublicationCard.astro';
+
+const research = (await getCollection('research')).sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+const projects = await getCollection('projects');
+const radar = await getCollection('radar');
+---
+
+<BaseLayout title="Vale Lab" description="A public research notebook for Vale Publishing.">
+  <section>
+    <p class="eyebrow">Vale Publishing / Public R&amp;D notebook</p>
+    <h1>Useful evidence<br />for strange futures.</h1>
+    <p class="lede">Vale Lab investigates emerging tools and ideas, separates evidence from speculation, and records what may be worth building next. Publication remains human-reviewed.</p>
+  </section>
+  <section>
+    <h2>Latest research</h2>
+    <div class="grid">{research.map((entry) => <PublicationCard entry={entry} href={`/research/${entry.id}`} />)}</div>
+  </section>
+  <section>
+    <h2>Active projects</h2>
+    <div class="grid">{projects.slice(0, 3).map((entry) => <PublicationCard entry={entry} href={`/projects/${entry.id}`} />)}</div>
+    <p><a href="/projects">See the complete build queue →</a></p>
+  </section>
+  <section>
+    <h2>Idea Radar</h2>
+    <p class="lede">A deliberately small queue of things worth investigating. These are internal project briefs, not externally verified recommendations.</p>
+    <div class="grid">{radar.map((entry) => <PublicationCard entry={entry} href="/research" />)}</div>
+  </section>
+</BaseLayout>
+
