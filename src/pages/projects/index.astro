@@ -4,11 +4,12 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import PublicationCard from '../../components/PublicationCard.astro';
 
 const entries = await getCollection('projects');
+const base = import.meta.env.BASE_URL;
 ---
 
 <BaseLayout title="Projects" description="Vale Lab's active and planned projects.">
   <p class="eyebrow">Compounding build queue</p>
   <h1>Projects</h1>
   <p class="lede">Each project is framed as a reusable system, not a one-off. Status reflects the current planning material.</p>
-  <div class="grid">{entries.map((entry) => <PublicationCard entry={entry} href={`/projects/${entry.id}`} />)}</div>
+  <div class="grid">{entries.map((entry) => <PublicationCard entry={entry} href={`${base}/projects/${entry.id}`} />)}</div>
 </BaseLayout>
